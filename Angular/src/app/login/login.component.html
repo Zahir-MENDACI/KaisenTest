@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <div class="title-text">
+      <div class="title login" [ngStyle]="{'margin-left': getStyle()}">Login Form</div>
+      <div class="title signup">Signup Form</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked />
+        <input type="radio" name="slide" id="signup" />
+        <label for="login" class="slide login" (click)="loginTab()">Login</label>
+        <label for="signup" class="slide signup" (click)="signupTab()">Signup</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="#" class="login" [ngStyle]="{'margin-left': getStyle()}" [formGroup]="loginForm">
+          <div class="field">
+            <input type="text" formControlName="email" placeholder="Email Address" required />
+          </div>
+          <div class="field">
+            <input type="password" formControlName="password" placeholder="Password" required />
+          </div>
+          <div class="pass-link">
+            <a href="#">Forgot password?</a>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login" (click)="login()"/>
+          </div>
+          <div class="signup-link">
+            Not a member? <a href="">Signup now</a>
+          </div>
+        </form>
+        <form action="#" class="signup" [formGroup]="registerForm">
+          <div class="field">
+            <input type="text" formControlName="email" placeholder="Email Address" required />
+          </div>
+          <div class="field">
+            <input type="password" formControlName="password" placeholder="Password" required />
+          </div>
+          <div class="field">
+            <input type="password" formControlName="cpassword" placeholder="Confirm password" required />
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup" (click)="register()"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

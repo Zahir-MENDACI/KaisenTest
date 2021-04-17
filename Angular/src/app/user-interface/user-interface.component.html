@@ -1,0 +1,4 @@
+<app-user-details  *ngFor="let data of datas"
+    [Email]="data.email"
+    [id]="data._id"></app-user-details>
+<button (click)="logout()">Deconnecter</button>
